@@ -11,7 +11,7 @@ C_ERR="\x1b[31m" # Error
 C_INF="\x1b[96m" # Info
 C_END="\x1b[0m"  # Reset
 
-[[ -z "$1" ]]&& echo -e "Usage:\n Create a file(s) with target domains and IPs.\n Then run this script with this file(s) as an argument(s)."
+[[ -z "$1" ]]&& echo -e "Usage:\n Create a file(s) with target domains and IPs.\n Then run this script with this file(s) as an argument(s)." && exit 2
 
 # Checking if files exists
 if [ -f "$IP_RESULTS" ] && [ -f "$DOMAIN_RESULTS" ]; then
