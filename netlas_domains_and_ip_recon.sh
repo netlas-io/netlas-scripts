@@ -47,7 +47,7 @@ for input_file in "$@"; do
       echo -e "${C_ERR}Error${C_END}: Unrecognized target \"$target_\" in file \"$input_file\"." >&2
     fi
   done < <(echo "$(<$input_file)") # File that "while" will read
-do
+done
 
 echo -e "${C_INF}Found${C_END} \"$(wc -l $IP_RESULTS)\" ${C_INF}IP addresses and${C_END} \"$(wc -l $DOMAIN_RESULTS)\" ${C_INF}domains.${C_END}\n"
 #rm $IP_RESULTS $DOMAIN_RESULTS
