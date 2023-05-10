@@ -27,22 +27,23 @@ fi
 for input_file in "$@"; do
 #for target_ in $(cat "$input_file"); do # Original Loop using cat
   while IFS= read -r target_; do
+  target_=$(echo $target_ | tr -d '\r')
     if [[ $target_ =~ $ip_or_cidr_regex ]]; then # IP or CIDR Section
       echo "$target_"
       temp_ips="$(echo "$(<$IP_RESULTS)")"; temp_domains="$(echo "$(<$DOMAIN_RESULTS)")"
       search_="$(netlas download -d domain -c 10000 -i domain,a "domain:* a:\"$target_\"")"
       new_ips="$(printf "%s\n" "$search_" | jq .data.a | tr -d "\" [],")"
       new_domains="$(printf "%s\n" "$search_" | jq -r .data.domain)"
-      sort -uV "$temp_ips" "$new_ips" | grep -v "^$" > "$IP_RESULTS"
-      sort -u "$temp_domains" "$new_domains" | grep -v "^$" > "$DOMAIN_RESULTS"
+      echo "$temp_ips" "$new_ips" | sort -uV | grep -v "^$"> $IP_RESULTS
+      echo "$temp_domains" "$new_domains" | sort -u | grep -v "^$"> $DOMAIN_RESULTS
     elif [[ $target_ =~ $domain_regex ]]; then # Domain Section
       echo "$target_"
       temp_ips="$(echo "$(<$IP_RESULTS)")"; temp_domains="$(echo "$(<$DOMAIN_RESULTS)")"
       search_="$(netlas download -d domain -c 10000 -i domain,a "domain:/(.*\.)?$target_/ a:*")"
       new_ips="$(printf "%s\n" "$search_" | jq .data.a | tr -d "\" [],")"
       new_domains="$(printf "%s\n" "$search_" | jq -r .data.domain)"
-      sort -uV "$temp_ips" "$new_ips" | grep -v "^$" > "$IP_RESULTS"
-      sort -u "$temp_domains" "$new_domains" | grep -v "^$" > "$DOMAIN_RESULTS"
+      echo "$temp_ips" "$new_ips" | sort -uV | grep -v "^$"> $IP_RESULTS
+      echo "$temp_domains" "$new_domains" | sort -u | grep -v "^$"> $DOMAIN_RESULTS
     else # Unrecognized target
       echo -e "${C_ERR}Error${C_END}: Unrecognized target \"$target_\" in file \"$input_file\"." >&2
     fi
