@@ -57,7 +57,7 @@ This script takes as input the files obtained as a result of the work of the pre
 ***
 ### Amass and Netlas recon script
 
-A script that starts searching for subdomains and visualizing the results using OWASP Amass.
+A script that starts searching for subdomains and visualizing the results using OWASP Amass.     
 *Note*: don't forget to edit config.ini if you want Amass to use Netlas searches as well. 
 You can read more about the script and utility settings for interacting with Netlas in this [article](https://netlas.medium.com/using-owasp-amass-with-netlas-io-module-cb7308669ecd).
 
