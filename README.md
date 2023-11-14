@@ -42,7 +42,7 @@ This script takes as input the files obtained as a result of the work of the pre
 
 **Usage:**
 
-`user@host:~$ bash netlas_download_http_responses.sh domains_from_netlas.txt ip_from_netlas.txt`  
+`user@host:~$ bash netlas_download_http_responses.sh domains_from_netlas.txt ips_from_netlas.txt`  
 
 **Output files:**
 
