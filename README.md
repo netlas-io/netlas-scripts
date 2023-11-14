@@ -70,6 +70,24 @@ You can read more about the script and utility settings for interacting with Net
 **results/** - directory with list of subdomains in .txt format and graph in .html.
 ***
 
+### Netlas search vulnerabilities in surface script
+
+Use this script to check objects from your attack surface for vulnerabilities. Searching by vulnerability pattern is supported (you need to manually add a request to the script) or by identifier (just enter CVE).
+Read more how it works in this [article](https://netlas.medium.com/how-to-find-probably-vulnerable-objects-in-your-own-surface-with-netlas-io-7f3448363892).
+
+**Usage:**
+
+`python3 netlas_cve_surface_check.py`
+
+**If you are searching by vulnerability pattern:** fix the sQuery line in netlas_cve_surface_check.py. You need to replace the search available there (for example, the script contains CVE-2023-36434, search for Microsoft IIS servers) with another one compiled by you or taken from our [Twitter](https://twitter.com/Netlas_io)/[Telegram](https://t.me/netlas).
+Then run the script and follow the instructions in the terminal: enter the path to the file that contains your surface, then select the "Pattern" mode.
+
+**If you are searching by CVE:** you don't need to fix anything in the script. Instead, run it and follow the instructions in the terminal: enter the path to the file, select the "CVE" mode, and enter the identifier in the format "CVE-...-...".
+
+**Output:**
+
+Count of probably vulnerable objects, their names.
+***
 
 ## Follow us
 
