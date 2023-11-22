@@ -88,6 +88,25 @@ Then run the script and follow the instructions in the terminal: enter the path 
 
 Count of probably vulnerable objects, their names.
 ***
+### Netlas passive scanner
+
+The script is designed to quickly and passively scan your surface using data stored by Netlas. Data is obtained from all responses of a given host, and information such as a list of vulnerabilities with their criticality, used ports, protocols, and software (Netlas tags) is displayed.
+
+**Usage:**
+
+`python3 netlas_passive_scan.py -i file_with_hosts`
+
+**Additional arguments:**
+
+`-o / --output` - output format. The default is YAML, which can be changed to JSON ("json" argument)
+
+`-k / --key` - your API key. The default is obtained from the corresponding variable in the script code, but you can change it (input like "--key nEwKEy")
+
+**Output:**
+
+Data in YAML/JSON format in the console. Can be saved to a file using output redirection (> or >>).
+***
+
 
 ## Follow us
 
