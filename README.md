@@ -70,7 +70,7 @@ You can read more about the script and utility settings for interacting with Net
 **results/** - directory with list of subdomains in .txt format and graph in .html.
 ***
 
-### Netlas search vulnerabilities in surface script
+### Netlas search vulnerabilities on a surface script
 
 Use this script to check objects from your attack surface for vulnerabilities. Searching by vulnerability pattern is supported (you need to manually add a request to the script) or by identifier (just enter CVE).
 Read more how it works in this [article](https://netlas.medium.com/how-to-find-probably-vulnerable-objects-in-your-own-surface-with-netlas-io-7f3448363892).
