@@ -98,9 +98,9 @@ The script is designed to quickly and passively scan your surface using data sto
 
 **Additional arguments:**
 
-`-o / --output` - output format. The default is YAML, which can be changed to JSON ("json" argument)
+`-o / --output` - output format. The default is YAML, which can be changed to JSON ("json" argument).
 
-`-k / --key` - your API key. The default is obtained from the corresponding variable in the script code, but you can change it (input like "--key nEwKEy")
+`-k / --key` - your API key. The default is obtained from the corresponding variable in the script code, but you can change it (input like "--key nEwKEy").
 
 **Output:**
 
@@ -116,7 +116,7 @@ This script will allow you to quickly collect all email addresses associated wit
 
 **Additional arguments:**
 
-`-k/--key` - your API key. The default is obtained from the OS-specific user config dir, but you can change it (input like "--key nEwKEy")
+`-k/--key` - your API key. The default is obtained from the OS-specific user config dir, but you can change it (input like "--key nEwKEy").
 
 `-e/--print-errors` - Displaying errors during the parsing process is disabled by default.
 
