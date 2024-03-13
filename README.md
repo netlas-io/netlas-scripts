@@ -106,8 +106,24 @@ The script is designed to quickly and passively scan your surface using data sto
 
 Data in YAML/JSON format in the console. Can be saved to a file using output redirection (> or >>).
 ***
+### Netlas emails by domain
 
+This script will allow you to quickly collect all email addresses associated with a specific domain. This can help both during OSINT investigations and during pen tests to collect targets for social engineering.
+
+**Usage:**
+
+`python3 netlas_emails_by_domain.py domain_name`
+
+**Additional arguments:**
+
+`-k/--key` - your API key. The default is obtained from the Netlas storage on your PC, but you can change it (input like "--key nEwKEy")
+
+`-e/--print-errors` - Displaying errors during the parsing process is disabled by default.
+
+**Output:**
+
+A sequence of email addresses in the console can be redirected to a file using output redirection (> or >>).
 
 ## Follow us
 
-[Twitter](https://twitter.com/Netlas_io), [Telegram](https://t.me/netlas), [Medium](https://medium.com/@netlas), [Linkedin](https://www.linkedin.com/company/netlas-io/), [Facebook](https://www.facebook.com/Netlas.io)
+[Twitter](https://twitter.com/Netlas_io), [Telegram](https://t.me/netlas), [Medium](https://medium.com/@netlas), [Linkedin](https://www.linkedin.com/company/netlas-io/)
