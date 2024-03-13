@@ -116,7 +116,7 @@ This script will allow you to quickly collect all email addresses associated wit
 
 **Additional arguments:**
 
-`-k/--key` - your API key. The default is obtained from the OS-specific config dir, but you can change it (input like "--key nEwKEy")
+`-k/--key` - your API key. The default is obtained from the OS-specific user config dir, but you can change it (input like "--key nEwKEy")
 
 `-e/--print-errors` - Displaying errors during the parsing process is disabled by default.
 
