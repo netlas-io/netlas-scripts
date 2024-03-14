@@ -112,6 +112,8 @@ Data in YAML/JSON format in the console. Can be saved to a file using output red
 
 This script will allow you to quickly collect all email addresses associated with a specific domain. This can help both during OSINT investigations and during pen tests to collect targets for social engineering.
 
+*Note*: To use this script you need a paid subscription with access to contacts.
+
 **Usage:**
 
 `python3 netlas_emails_by_domain.py domain_name`
