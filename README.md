@@ -127,6 +127,24 @@ This script will allow you to quickly collect all email addresses associated wit
 **Output:**
 
 A sequence of email addresses in the console can be redirected to a file using output redirection (> or >>).
+***
+### Netlas documents by domain
+
+This script will allow you to quickly collect all documents which store in responses associated with specific domain. This can help both during OSINT investigations and during pen tests to collect targets for social engineering.
+
+**Usage:**
+
+`python3 netlas_docs_by_domain.py domain_name`
+
+**Additional arguments:**
+
+`-k/--key` - Your API key. The default is obtained from the OS-specific user config dir, but you can change it (input like "--key nEwKEy").
+
+`-e/--print-errors` - Displaying errors during the parsing process is disabled by default.
+
+**Output:**
+
+Links to documents in the console, can be redirected to a file using output redirection (> or >>).
 
 ## Follow us
 
