@@ -5,7 +5,7 @@ In this repository, you can find some scripts that use [Netlas.io](https://netla
 [![License: CC0-1.0](https://img.shields.io/badge/License-CC0%201.0-lightgrey.svg)](http://creativecommons.org/publicdomain/zero/1.0/)
 ***
 ## Installing
-*Note*: Guide for Debian/Ubuntu only.
+*Note*: Install for Debian/Ubuntu only.
 1. Make sure you have bash installed. If not, install it first by running the following commands in the Terminal:  
 `$ sudo apt update`  
 `$ sudo apt upgrade`  
@@ -145,6 +145,24 @@ This script will allow you to quickly collect all documents which store in respo
 **Output:**
 
 Links to documents in the console, can be redirected to a file using output redirection (> or >>).
+***
+### Netlas company's tech profile script
+
+This script allows you to semi-automatically collect information about the technological profile of a company, including the services used, providers, registrars, and so on. You can read more [here](https://blog.netlas.io/building-tech-profile-of-a-company-f2145dedad31).
+
+**Usage:**
+
+`python3 netlas_company_tech_profile.py -i file_with_scope`
+
+**Additional arguments:**
+
+`-k/--key` - Your API key. The default is obtained from the OS-specific user config dir, but you can change it (input like "--key nEwKEy").
+
+`-s/--services` - Path to file with services list.
+
+**Output:**
+
+Summary containing all the information found.
 
 ## Follow us
 
