@@ -92,12 +92,16 @@ def whoisRegistryIP(host, netlas_connection):
 
     for query_res in downloaded_query:
         data = json.loads(query_res)['data']
-        registry = data['asn']['registry'].upper()
+        
+        try:
+            registry = data['asn']['registry'].upper()
 
-        if registry in registriesList:
+            if registry in registriesList:
+                pass
+            else:
+                registriesList.append(registry)
+        except:
             pass
-        else:
-            registriesList.append(registry)
 
 def whoisRegistrarDomain(host, netlas_connection):
     sQuery = "domain:" + host
