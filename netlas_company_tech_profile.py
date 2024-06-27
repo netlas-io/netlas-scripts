@@ -112,12 +112,16 @@ def whoisRegistrarDomain(host, netlas_connection):
 
     for query_res in downloaded_query:
         data = json.loads(query_res)['data']
-        registrar = data['registrar']['name']
 
-        if registrar in registrarsList:
+        try:
+            registrar = data['registrar']['name']
+
+            if registrar in registrarsList:
+                pass
+            else:
+                registrarsList.append(registrar)
+        except:
             pass
-        else:
-            registrarsList.append(registrar)
 
 def getServices(netlas_connection):
     if servicesFileName != 'None':
