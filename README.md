@@ -2,11 +2,9 @@
 
 Here you can find some scripts that use [Netlas.io](https://netlas.io) search engine. Some of them may be of interest to pen testers or bug bounters, and some to enthusiasts in the field of information security. And some will simply allow you to spend time with interest, studying various objects on the vast Internet.
 
-[![License: CC0-1.0](https://img.shields.io/badge/License-CC0%201.0-lightgrey.svg)](http://creativecommons.org/publicdomain/zero/1.0/)
-
 - [Installing](#installing)
 - [Passive Recon Script](#passive-recon-script)
-- [HTTP Responses Download](http-responses-download)
+- [HTTP Responses Download](#http-responses-download)
 - [Amass and Netlas Recon](#amass-and-netlas-recon)
 - [Vulnerabilities Search](#vulnerabilities-search)
 - [Passive Scanner](#passive-scanner)
