@@ -12,6 +12,8 @@ Here you can find some scripts that use [Netlas.io](https://netlas.io) search en
 - [Documents by Domain](#documents-by-domain)
 - [Company Tech Profile](#company-tech-profile)
 
+The code is available under Creative Commons License   
+<span class="hidden">[![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)</span>
 
 ## Installing
 
