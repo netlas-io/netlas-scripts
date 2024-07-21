@@ -128,13 +128,13 @@ python3 netlas_passive_scan.py -i file_with_hosts
 
 **Additional arguments:**
 
-`-o / --output` - output format. The default is YAML, which can be changed to JSON ("json" argument).
+`-o / --output` - output format. The default is YAML, which can be changed to JSON (`json` argument).
 
-`-k / --key` - your API key. The default is obtained from the corresponding variable in the script code, but you can change it (input like "--key nEwKEy").
+`-k / --key` - your API key. The default is obtained from the corresponding variable in the script code, but you can change it (input like `--key nEwKEy`).
 
 **Output:**
 
-Data in YAML/JSON format in the console. Can be saved to a file using output redirection (> or >>).
+Data in YAML/JSON format in the console. Can be saved to a file using output redirection (`>` or `>>`).
 
 
 ## Emails by Domain
@@ -151,13 +151,13 @@ python3 netlas_emails_by_domain.py domain_name
 
 **Additional arguments:**
 
-`-k/--key` - your API key. The default is obtained from the OS-specific user config dir, but you can change it (input like "--key nEwKEy").
+`-k/--key` - your API key. The default is obtained from the OS-specific user config dir, but you can change it (input like `--key nEwKEy`).
 
 `-e/--print-errors` - Displaying errors during the parsing process is disabled by default.
 
 **Output:**
 
-A sequence of email addresses in the console can be redirected to a file using output redirection (> or >>).
+A sequence of email addresses in the console can be redirected to a file using output redirection (`>` or `>>`).
 
 
 ## Documents by Domain
@@ -172,13 +172,13 @@ python3 netlas_docs_by_domain.py domain_name
 
 **Additional arguments:**
 
-`-k/--key` - Your API key. The default is obtained from the OS-specific user config dir, but you can change it (input like "--key nEwKEy").
+`-k/--key` - Your API key. The default is obtained from the OS-specific user config dir, but you can change it (input like `--key nEwKEy`).
 
 `-e/--print-errors` - Displaying errors during the parsing process is disabled by default.
 
 **Output:**
 
-Links to documents in the console, can be redirected to a file using output redirection (> or >>).
+Links to documents in the console, can be redirected to a file using output redirection (`>` or `>>`).
 
 
 ## Company Tech Profile
@@ -193,7 +193,7 @@ python3 netlas_company_tech_profile.py -i file_with_scope
 
 **Additional arguments:**
 
-`-k/--key` - Your API key. The default is obtained from the OS-specific user config dir, but you can change it (input like "--key nEwKEy").
+`-k/--key` - Your API key. The default is obtained from the OS-specific user config dir, but you can change it (input like `--key nEwKEy`).
 
 `-s/--services` - Path to file with services list.
 
