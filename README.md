@@ -1,8 +1,16 @@
-# Netlas Scripts
+# Netlas Scripts <!-- omit in toc -->
 
-Here you can find some scripts that use [Netlas.io](https://netlas.io) search engine. Some of them may be of interest to pen testers or bug bounters, and some to enthusiasts in the field of information security. And some will simply allow you to spend time with interest, studying various objects on the vast Internet.
+Here you can find some scripts that use [Netlas.io](https://netlas.io) search engine. Some of them may be of interest to pen testers or bug bounty  hunters, and some to enthusiasts in the field of information security. Anyone can freely use these repository contents as examples when developing their own integrations or scripts. The code is available under Creative Commons License.
 
-- [Installing](#installing)
+<span class="hidden">[![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)</span>
+
+Do not forget to install Netlas Python SDK:
+
+```bash
+pip install netlas
+```
+*Note*: more about Netlas Python SDK & CLI Tool on [Netlas Docs &rarr;](https://docs.netlas.io/automation/setup/).  
+
 - [Passive Recon Script](#passive-recon-script)
 - [HTTP Responses Download](#http-responses-download)
 - [Amass and Netlas Recon](#amass-and-netlas-recon)
@@ -12,39 +20,14 @@ Here you can find some scripts that use [Netlas.io](https://netlas.io) search en
 - [Documents by Domain](#documents-by-domain)
 - [Company Tech Profile](#company-tech-profile)
 
-The code is available under Creative Commons License   
-<span class="hidden">[![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)</span>
-
-## Installing
-
-*Note*: Install for Debian/Ubuntu only.
-1. Make sure you have bash installed. If not, install it first by running the following commands in the Terminal:  
-    ```bash
-    sudo apt update
-    sudo apt upgrade
-    sudo apt install bash-completion
-    ```
-
-2. Install Netlas CLI and save your API Key to your local device  
-    ```bash
-    pip install netlas
-    netlas savekey [APIKEY]
-    ```
-    *Note*: more about Netlas CLI you can read [here](https://docs.netlas.io/automation/setup/).  
-
-3. Clone this repository
-    ```bash
-    git clone https://github.com/netlas-io/netlas-scripts.git
-    ```
-
 ## Passive Recon Script
 
 Use this script to passively extend an atack surface of any target. It gets a files with domains, subdomains, IP addresses and CIDRs as an input info and returns a list of domains, subdomains and IP addresses that are also related to the target. Read more about how it works in this [article](https://netlas.medium.com/fast-one-shot-passive-recon-script-with-netlas-io-53a75b018fcc).
 
 **Usage:** 
 
-```
-user@host:~$ bash netlas_domains_and_ip_recon.sh domains_IPs_CIDRs.txt
+```bash
+bash netlas_domains_and_ip_recon.sh domains_IPs_CIDRs.txt
 ```
 
 **Output files:**
@@ -61,8 +44,8 @@ This script takes as input the files obtained as a result of the work of the pre
 
 **Usage:**
 
-```
-user@host:~$ bash netlas_download_http_responses.sh domains_from_netlas.txt ips_from_netlas.txt
+```bash
+bash netlas_download_http_responses.sh domains_from_netlas.txt ips_from_netlas.txt
 ```
 
 **Output files:**
@@ -86,8 +69,8 @@ You can read more about the script and utility settings for interacting with Net
 
 **Usage:**
 
-```
-user@host:~$ bash amass_netlas_recon.sh
+```bash
+bash amass_netlas_recon.sh
 ```
 
 **Output files:**
@@ -102,7 +85,7 @@ Read more how it works in this [article](https://netlas.medium.com/how-to-find-p
 
 **Usage:**
 
-```
+```bash
 python3 netlas_cve_surface_check.py
 ```
 
@@ -122,7 +105,7 @@ The script is designed to quickly and passively scan your surface using data sto
 
 **Usage:**
 
-```
+```bash
 python3 netlas_passive_scan.py -i file_with_hosts
 ```
 
@@ -145,7 +128,7 @@ This script will allow you to quickly collect all email addresses associated wit
 
 **Usage:**
 
-```
+```bash
 python3 netlas_emails_by_domain.py domain_name
 ```
 
@@ -166,7 +149,7 @@ This script will allow you to quickly collect all documents which store in respo
 
 **Usage:**
 
-```
+```bash
 python3 netlas_docs_by_domain.py domain_name
 ```
 
@@ -187,7 +170,7 @@ This script allows you to semi-automatically collect information about the techn
 
 **Usage:**
 
-```
+```bash
 python3 netlas_company_tech_profile.py -i file_with_scope
 ```
 
