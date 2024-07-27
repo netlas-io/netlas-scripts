@@ -166,7 +166,7 @@ Links to documents in the console, can be redirected to a file using output redi
 
 ## Company Tech Profile
 
-This script allows you to semi-automatically collect information about the technological profile of a company, including the services used, providers, registrars, and so on. You can read more [here](https://blog.netlas.io/building-tech-profile-of-a-company-f2145dedad31).
+This script allows you to semi-automatically collect information about the technological profile of a company, including the services used, providers, registrars, and so on. You can read more [here](https://netlas.medium.com/building-tech-profile-of-a-company-f2145dedad31).
 
 **Usage:**
 
