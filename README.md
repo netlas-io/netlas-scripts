@@ -22,7 +22,7 @@ pip install netlas
 
 ## Passive Recon Script
 
-Use this script to passively extend an atack surface of any target. It gets a files with domains, subdomains, IP addresses and CIDRs as an input info and returns a list of domains, subdomains and IP addresses that are also related to the target. Read more about how it works in this [article](https://netlas.medium.com/fast-one-shot-passive-recon-script-with-netlas-io-53a75b018fcc).
+Use this script to passively extend an atack surface of any target. It gets a files with domains, subdomains, IP addresses and CIDRs as an input info and returns a list of domains, subdomains and IP addresses that are also related to the target. Read more about how it works in this [article](https://osintteam.blog/fast-one-shot-passive-recon-script-with-netlas-io-53a75b018fcc).
 
 **Usage:** 
 
@@ -40,7 +40,7 @@ bash netlas_domains_and_ip_recon.sh domains_IPs_CIDRs.txt
 
 Use this script to download web pages available in Netlas.io Responses Search tool. It gets a files with domains, subdomains and IP addresses as an input and returns a set of html files associated with these targets.
 
-This script takes as input the files obtained as a result of the work of the previous one and loads all the pages from all objects, which will later automatically check them for vulnerabilities. Read more about how it works in this [article](https://netlas.medium.com/fast-one-shot-passive-recon-script-with-netlas-io-53a75b018fcc).
+This script takes as input the files obtained as a result of the work of the previous one and loads all the pages from all objects, which will later automatically check them for vulnerabilities. Read more about how it works in this [article](https://osintteam.blog/fast-one-shot-passive-recon-script-with-netlas-io-53a75b018fcc).
 
 **Usage:**
 
@@ -81,7 +81,7 @@ bash amass_netlas_recon.sh
 ## Vulnerabilities Search
 
 Use this script to check objects from your attack surface for vulnerabilities. Searching by vulnerability pattern is supported (you need to manually add a request to the script) or by identifier (just enter CVE).
-Read more how it works in this [article](https://netlas.medium.com/how-to-find-probably-vulnerable-objects-in-your-own-surface-with-netlas-io-7f3448363892).
+Read more how it works in this [article](https://systemweakness.com/how-to-find-probably-vulnerable-objects-in-your-own-surface-with-netlas-io-7f3448363892).
 
 **Usage:**
 
