@@ -19,6 +19,7 @@ pip install netlas
 - [Emails by Domain](#emails-by-domain)
 - [Documents by Domain](#documents-by-domain)
 - [Company Tech Profile](#company-tech-profile)
+- [Google Dorking Automatization](#google-dorking-automatization)
 
 ## Passive Recon Script
 
@@ -183,3 +184,21 @@ python3 netlas_company_tech_profile.py -i file_with_scope
 **Output:**
 
 Summary containing all the information found.
+
+## Google Dorking Automatization
+
+This script makes a series of Google queries using [dorks from Mike Takashi](https://github.com/TakSec/google-dorks-bug-bounty/?tab=readme-ov-file). The results obtained are collected in the form of json/yaml and output to the terminal.
+
+**Usage**:
+
+```bash
+python3 google_dorking_automatization.py -i file_with_scope
+```
+
+**Additional arguments:**
+
+`-o/--output` - Output format: YAML or JSON (default - YAML).
+
+`-c/--count` - Count of results from one query.
+
+Read more about this script in [our article](https://netlas.io/blog/google_dorking_in_cybersecurity/).
