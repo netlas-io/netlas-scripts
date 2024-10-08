@@ -201,4 +201,8 @@ python3 google_dorking_automatization.py -i file_with_scope
 
 `-c/--count` - Count of results from one query.
 
+**Output**:
+
+Links to webpages in the console, can be redirected to a file using output redirection (> or >>).
+
 Read more about this script in [our article](https://netlas.io/blog/google_dorking_in_cybersecurity/).
