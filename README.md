@@ -15,6 +15,7 @@ pip install netlas
 - [HTTP Responses Download](#http-responses-download)
 - [Amass and Netlas Recon](#amass-and-netlas-recon)
 - [Vulnerabilities Search](#vulnerabilities-search)
+- [Identifying C\&C Servers Using Abuse.ch SSL Blacklist and Netlas](#identifying-cc-servers-using-abusech-ssl-blacklist-and-netlas)
 - [Passive Scanner](#passive-scanner)
 - [Emails by Domain](#emails-by-domain)
 - [Documents by Domain](#documents-by-domain)
@@ -99,6 +100,39 @@ Then run the script and follow the instructions in the terminal: enter the path 
 
 Count of probably vulnerable objects, their names.
 
+## Identifying C&C Servers Using Abuse.ch SSL Blacklist and Netlas
+
+This script downloads the SSL Certificate Blacklist CSV file from Abuse.ch, processes it, and queries the Netlas API to search for the most relevant internet scan data, identifying hosts that are using blacklisted SSL certificates.
+
+Key functionalities:
+1. Downloads and processes the CSV file from Abuse.ch.
+2. Extracts the SHA-1 fingerprint of each SSL certificate.
+3. Uses the Netlas API to search for hosts with these blacklisted certificates.
+4. Outputs IP addresses and ports associated with each blacklisted certificate.
+
+**Important:** The script makes thousands of requests to the Netlas API. A **paid Netlas account** is required to ensure sufficient API usage limits.
+
+**Usage:**
+
+```bash
+python3 sslbl_netlas_search.py
+```
+
+**Output sample:**
+
+```text
+195.201.141.106:443     Vidar C&C (bfe0b1a3b0178779bbd0cae86e7a7bcc34558463)
+116.203.14.4:443        Vidar C&C (2cab90fc1044fa9ec7706e41a418b0c427002beb)
+47.242.227.169:443      CobaltStrike C&C (984ef7eab73b77e5e8d24727022aac9f12c705d9)
+66.63.187.205:443       LegionLoader C&C (a728f59bb6b73af97af852879e85789775dbca0b)
+188.119.66.185:443      Socks5Systemz C&C (dabed6d3b133b078ba8ef95396954a5f7e1fca0b)
+91.211.249.30:443       Socks5Systemz C&C (bb1c6fb9e3bfd4bf6f784a08040b7ceba1ad0ebf)
+158.247.208.174:443     Sliver C&C (1bd1fee41dac6fda021becc6ed67c26e7e7315ed)
+175.178.109.66:443      CobaltStrike C&C (16b297fe392a082c653ed159106253c76c2e6b66)
+122.51.7.208:443	      CobaltStrike C&C (16b297fe392a082c653ed159106253c76c2e6b66)
+81.71.103.11:443	      CobaltStrike C&C (16b297fe392a082c653ed159106253c76c2e6b66)
+...
+```
 
 ## Passive Scanner
 
