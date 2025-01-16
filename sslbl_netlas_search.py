@@ -121,7 +121,5 @@ for row in reader:
 
         # Mark the hash as used
         used_hashes.append(row[1])
-    if line_no == 20:
-        break
 
 print(f"\r{' ' * 40}")
