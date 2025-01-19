@@ -8,7 +8,7 @@ Key functionalities:
 2. Processes the CSV to extract SHA-1 fingerprints of blacklisted SSL certificates.
 3. Queries the Netlas API to find URIs (not just IPs) associated with these blacklisted certificates.
 4. Outputs the results, including URIs and associated ports, to a CSV file.
-5. Supports command-line options -a / --apikey for providing an API key and -s/--silent to supress the output.
+5. Supports command-line options -o/--output for providing output CSV file name, -a/--apikey for providing an API key and -s/--silent to supress the output.
 
 Important:
 - The script makes thousands of requests to the Netlas API. A **paid Netlas account** is required
@@ -38,11 +38,17 @@ max_delay = 60     # Maximum delay in seconds
 
 csv_chunk_size = 80 # Number of lines per request MAX=90
 flush_to_file_every = 1000 # Maximum amount of lines stored in memmory, when exeeded will be flushed to the output file
+output_file_path = f"sslbl_netlas_output_{datetime.now().strftime("%Y-%m-%d_%H-%M-%S")}.csv" # Default output file name
 
 # Parse command-line arguments
-parser = argparse.ArgumentParser(description="A script with progress bar, silent mode, and Netlas API Key support.")
-parser.add_argument("-s", "--silent", action="store_true", help="Run the script without any output.")
-parser.add_argument("-a", "--apikey", type=str, help="Netlas API Key for accessing the service (optional).")
+parser = argparse.ArgumentParser(description='''
+                    Search for hosts with blacklisted certificates in the latest Netlas Internet Scan Data collection.
+                    Indicators of Compromise (IoCs) provided by the Abuse.ch SSL Certificate Blacklist.
+                    ''')
+parser.add_argument("-o", "--output", type=str, default=output_file_path, 
+                    help=f"specify the output file name (default: {output_file_path})")
+parser.add_argument("-a", "--apikey", type=str, help="netlas API Key for accessing the service (optional)")
+parser.add_argument("-s", "--silent", action="store_true", help="run the script without any output")
 args = parser.parse_args()
 
 
@@ -154,11 +160,18 @@ while True:
 
 # Update progress bar and output total number of targets to download
 show_progress_bar(len(csv_lines), len(csv_lines), start_time)
-print(f"\nFound {format(total_targets, ",")} targets to download.")
 
 
-# Output CSV file
-output_file_path = f"sslbl_netlas_output_{datetime.now().strftime("%Y-%m-%d_%H-%M-%S")}.csv"
+# Check if there are any targets to download
+if total_targets > 0:
+    print(f"\nFound {format(total_targets, ',')} targets to download.")
+else:
+    print(f"Processed {len(csv_lines)} lines. No targets found to download.")
+    exit(code=-2)
+
+# Setting up output file
+if args.output:
+    output_file_path = args.output
 output_file = open(output_file_path, mode='w', newline='', encoding='utf-8')
 writer = csv.writer(output_file)
 print(f"Writing output to '{output_file_path}'.")
