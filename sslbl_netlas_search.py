@@ -38,7 +38,7 @@ max_delay = 60     # Maximum delay in seconds
 
 csv_chunk_size = 80 # Number of lines per request MAX=90
 flush_to_file_every = 1000 # Maximum amount of lines stored in memmory, when exeeded will be flushed to the output file
-output_file_path = f"sslbl_netlas_output_{datetime.now().strftime("%Y-%m-%d_%H-%M-%S")}.csv" # Default output file name
+output_file_path = f"sslbl_netlas_output_{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}.csv" # Default output file name
 
 # Parse command-line arguments
 parser = argparse.ArgumentParser(description='''
