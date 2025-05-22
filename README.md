@@ -9,7 +9,7 @@ Do not forget to install Netlas Python SDK:
 ```bash
 pip install netlas
 ```
-*Note*: more about Netlas Python SDK & CLI Tool on [Netlas Docs &rarr;](https://docs.netlas.io/automation/setup/).  
+*Note*: more about Netlas Python SDK & CLI Tool on [Netlas Docs &rarr;](https://docs.netlas.io/api-reference/).  
 
 - [Passive Recon Script](#passive-recon-script)
 - [HTTP Responses Download](#http-responses-download)
